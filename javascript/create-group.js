@@ -1,9 +1,14 @@
+const userId = firebase.auth().currentUser.uid;
+firebase.database().ref('users/' + userId).once('value').then(function (snapshot){
+    console.log(userId);
+})
+
 // create group name
 // const createForm = document.querySelector('#create-group');
 // createForm.addEventListener('submit', (e) => {
 //     e.preventDefault();
 //     groupname = $('#groupname').val().trim();
-//     db.ref('groups/').set({
+//     db.ref('users/' + userId).set({
 //         groupname: groupname
 //     });
 // });

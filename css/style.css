@@ -138,11 +138,11 @@ button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover, button#lg-submi
    align-items: center;
    width: 95%;
    height: auto;
-   padding: 5%;
+   /* padding: 5%; */
    margin: 2% 2% 2% 2%;
    background: white;
    color: #330000;
-   border: 1px solid #CDB99C;
+   /* border: 1px solid #CDB99C; */
    border-radius: 5px;
 }
 /*Main page content*/
@@ -355,22 +355,39 @@ h2:hover, h5:hover {
 /*form starts here*/
 
 
-#label-group-name,#label-member-name, #label-city, #label-state, #label-group-email,
-#label-user-name, #label-full-name, #label-profile-city, #label-profile-state, #label-profile-email {
-   display: inline-block;
+#group-label,#member-label {
+   display: block;
    width: 140px;
    padding: 5px;
-   text-align: center;
+   font-weight: bold;
+   margin-bottom: 0;
 }
-
-#groupname, #membername, #membercity, #memberstate, #memberemail {
+#groupname {
    margin: 5px 5px;
-   width: 45%;
+   width: 55%;
    display: block;
    border: 1px solid #CDB99C;
    border-radius: 5px;
    padding: 5px;
 }
+#membername, #membercity, #memberemail {
+   margin: 5px 5px;
+   width: 85%;
+   display: block;
+   border: 1px solid #CDB99C;
+   border-radius: 5px;
+   padding: 5px;
+}
+
+#memberstate {
+   margin: 5px 5px;
+   width: 35%;
+   display: block;
+   border: 1px solid #CDB99C;
+   border-radius: 5px;
+   padding: 5px;
+}
+
 #input-group-name:hover, #input-member-name:hover , #inputCity:hover, #inputState:hover, #input-group-email:hover,
 #input-user-name:hover, #input-full-name:hover, #input-profile-City:hover, #input-profile-State:hover, #input-profile-email:hover{
  border: 1px solid #330000;
@@ -399,9 +416,9 @@ hr.style-one {
  /*Button to create group*/
 .btn-primary-group{
    align-items: center;
-   margin: 1% 0 0 15%;
+   margin-left: 1%;
    background-color: #3399CC;
-   color: #CDB99C;
+   color: #FFFFFF;
 }
 /*Profile modal starts here */
 .modal-content-profile{
