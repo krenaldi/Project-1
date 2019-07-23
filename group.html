@@ -53,25 +53,47 @@
     </nav>
 
     <!-- Here start the div for the search bar -->
-    <div class="contianer-fluid-main">
-        <h2>Create Group </h2>
-        <h4>Create a Group Name then add members</h4>
-        <hr>
-        <form id="create-group">
-            <div class="form-group-page">
-
-                <div class="input-group">
-                    <label for="groupname" id="group-label">Group Name</label>
-                    <input type="text" class="form-control-page" id="groupname" placeholder="Group Name">
-                    <button type="submit" class="btn btn-primary-group">Add Group Name</button>
-                </div>
+    <div class="search">
+        <form id="search-form" action="">
+            <!-- Form for the input and search -->
+            <input type="text" placeholder="Search.." id="input-search"> <!--  Id for search input-->
+            <button type="submit">SUBMIT<i class="fa fa-search" id="btn-search"></i></button>
+            <!-- Id for search button -->
         </form>
     </div>
-    </div>
 
-    <div class="contianer-fluid-main">
+<hr>
 
-        <h2>Add Members to Group</h2>
+    <div class="contianer-fulid-main">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Create Group</h2>
+            </div>
+
+            <div class="row">
+                <!-- empty column 1-->
+                <div class="col-md-1"></div>
+
+                <div class="col-md-5">
+                    <form id="create-members">
+                        <div class="form-group-page">
+
+                            <div class="input-group">
+                                <!-- <label for="groupname" id="label-group-name">Group Name</label> -->
+                                <input type="text" class="form-control-page" id="groupname" placeholder="Group Name">
+                            </div>
+                                <!-- <button type="submit" class="btn btn-primary-group">Add Group Name</button> -->
+                                <!-- </form>
+                                <form id="create-members">         -->
+                            <div class="input-group">
+                                <!-- <label for="membername" id="label-member-name">Member Name</label> -->
+                                <input type="text" class="form-control-page" id="membername" placeholder="Member Name">
+                            </div>
+
+                            <div class="input-group">
+                                <!-- <label for="city" id="label-city">City </label> -->
+                                <input type="text" class="form-control-page" id="membercity" placeholder=" City">
+                            </div>
 
         <form id="create-members">
             <table class="table">
@@ -122,97 +144,209 @@
                 </tbody>
             </table>
             <hr class="style-one">
+                            <div class="input-group">
+                                <!-- <label for="state" id="label-state">State </label> -->
+                                <input type="text" class="form-control-page" id="memberstate" placeholder=" State">
+                            </div>
+
+                            <div class="input-group">
+                                <!-- <label for="member-email" id="label-group-email">Member Email</label> -->
+                                <input type="email" class="form-control-page" id="memberemail"
+                                    placeholder=" name@example.com">
+                            </div>
+
+                        </div>
+
+                        
+                        <!-- <hr class="style-one"> -->
+
+                        <!-- <div class="input-group">
+                             <a class="group-add-more" href="#" data-toggle="form-group-page" data-target=""> Add more members
+                              </a>
+                                 </div> -->
+                        <!-- <hr class="style-one"> -->
+
+                        <button type="submit" class="btn btn-primary-group">ADD MEMBER</button>
+
+                    </form>
+
+                </div>
 
             <button type="submit" class="btn btn-primary-group">Add Member</button>
             <button type="submit" class="btn btn-primary-group">Add More Member Rows</button>
+                <div class="col-md-5">
+                        <img src="images/bright.jpg" id="about-img" class="img-fluid" alt="group of people image">
+                    </div>
 
     </form>
     </div>
 
 
-    <!-- modal for profile starts here -->
 
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content-profile">
-                <button type="button" class="close-profile" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-header-profile">
-                    <h3 class="modal-title-profile">Profile</h3>
-                </div>
-                <hr>
-                <div class="profile-details"></div>
-            </div>
-        </div>
-    </div>
+        <!-- modal for profile starts here -->
 
-    <!-- Modal for Profile Ends here-->
-
-    <!-- GET STARTED trigger modal -->
-    <div class="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">GET STARTED</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content-profile">
+                    <button type="button" class="close-profile" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
+                    <div class="modal-header-profile">
+                        <h3 class="modal-title-profile">Profile</h3>
+                    </div>
+                    <hr>
+                    <div class="profile-details"></div>
                 </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
+            </div>
+        </div>
 
-                            <!-- LOG IN form -->
-                            <div class="col-md-5" id="modal-log">
-                                <form id="login-form">
-                                    <div class="form-group">
-                                        <label for="log-email" style="color: #495057; font-weight: bold;">Already have
-                                            an account?</label>
-                                        <input type="email" class="form-control" id="login-email"
-                                            aria-describedby="emailHelp" placeholder="Email">
-                                    </div>
+        <!-- Modal for Profile Ends here-->
 
-                                    <div class="form-group">
-                                        <label for="login-password"></label>
-                                        <input type="password" class="form-control" id="login-password"
-                                            placeholder="Password">
-                                    </div>
+        <!-- GET STARTED trigger modal -->
+        <div class="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">GET STARTED</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
 
-                                    <!-- LOG IN button -->
-                                    <div id="test-left">
-                                        <button type="submit" class="btn btn-primary" id="lg-log">LOG IN</button>
-                                    </div>
+                                <!-- LOG IN form -->
+                                <div class="col-md-5" id="modal-log">
+                                    <form id="login-form">
+                                        <div class="form-group">
+                                            <label for="log-email" style="color: #495057; font-weight: bold;">Already
+                                                have
+                                                an account?</label>
+                                            <input type="email" class="form-control" id="login-email"
+                                                aria-describedby="emailHelp" placeholder="Email">
+                                        </div>
 
-                                </form>
+                                        <div class="form-group">
+                                            <label for="login-password"></label>
+                                            <input type="password" class="form-control" id="login-password"
+                                                placeholder="Password">
+                                        </div>
 
-                            </div>
+                                        <!-- LOG IN button -->
+                                        <div id="test-left">
+                                            <button type="submit" class="btn btn-primary" id="lg-log">LOG
+                                                IN</button>
+                                        </div>
 
+                                    </form>
 
-                            <!-- or image -->
-                            <div class="col-md-2">
-                                <img src="images/or.jpg" id="modal-or" class="img-fluid" alt="or">
-                            </div>
-
-
-                            <!-- REGISTER form -->
-                            <div class="col-md-5 rform" id="modal-log">
-                                <form id="register-form">
-                                    <div class="form-group">
-                                        <label for="displayname" style="color: #495057; font-weight: bold;">Don't have
-                                            an account?</label>
-                                        <input type="text" class="form-control" id="displayName"
-                                            placeholder="Display Name">
-                                    </div>
-
-
-                                    <div class="row">
+                                </div>
 
 
-                                        <div class="form-group container-fluid p-0" id="reg-city">
-                                            <label for="city"></label>
-                                            <input type="text" class="form-control" id="city" placeholder="City">
+                                <!-- or image -->
+                                <div class="col-md-2">
+                                    <img src="images/or.jpg" id="modal-or" class="img-fluid" alt="or">
+                                </div>
+
+
+                                <!-- REGISTER form -->
+                                <div class="col-md-5 rform" id="modal-log">
+                                    <form id="register-form">
+                                        <div class="form-group">
+                                            <label for="displayname" style="color: #495057; font-weight: bold;">Don't
+                                                have
+                                                an account?</label>
+                                            <input type="text" class="form-control" id="displayName"
+                                                placeholder="Display Name">
+                                        </div>
+
+
+                                        <div class="row">
+
+
+                                            <div class="form-group container-fluid p-0" id="reg-city">
+                                                <label for="city"></label>
+                                                <input type="text" class="form-control" id="city" placeholder="City">
+                                            </div>
+                                            <select id="reg-state">
+                                                <option value="AL">AL</option>
+                                                <option value="AK">AK</option>
+                                                <option value="AR">AR</option>
+                                                <option value="AZ">AZ</option>
+                                                <option value="CA">CA</option>
+                                                <option value="CO">CO</option>
+                                                <option value="CT">CT</option>
+                                                <option value="DC">DC</option>
+                                                <option value="DE">DE</option>
+                                                <option value="FL">FL</option>
+                                                <option value="GA">GA</option>
+                                                <option value="HI">HI</option>
+                                                <option value="IA">IA</option>
+                                                <option value="ID">ID</option>
+                                                <option value="IL">IL</option>
+                                                <option value="IN">IN</option>
+                                                <option value="KS">KS</option>
+                                                <option value="KY">KY</option>
+                                                <option value="LA">LA</option>
+                                                <option value="MA">MA</option>
+                                                <option value="MD">MD</option>
+                                                <option value="ME">ME</option>
+                                                <option value="MI">MI</option>
+                                                <option value="MN">MN</option>
+                                                <option value="MO">MO</option>
+                                                <option value="MS">MS</option>
+                                                <option value="MT">MT</option>
+                                                <option value="NC">NC</option>
+                                                <option value="NE">NE</option>
+                                                <option value="NH">NH</option>
+                                                <option value="NJ">NJ</option>
+                                                <option value="NM">NM</option>
+                                                <option value="NV">NV</option>
+                                                <option value="NY">NY</option>
+                                                <option value="ND">ND</option>
+                                                <option value="OH">OH</option>
+                                                <option value="OK">OK</option>
+                                                <option value="OR">OR</option>
+                                                <option value="PA">PA</option>
+                                                <option value="RI">RI</option>
+                                                <option value="SC">SC</option>
+                                                <option value="SD">SD</option>
+                                                <option value="TN">TN</option>
+                                                <option value="TX">TX</option>
+                                                <option value="UT">UT</option>
+                                                <option value="VT">VT</option>
+                                                <option value="VA">VA</option>
+                                                <option value="WA">WA</option>
+                                                <option value="WI">WI</option>
+                                                <option value="WV">WV</option>
+                                                <option value="WY">WY</option>
+                                            </select>
+
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="reg-email"></label>
+                                            <input type="email" class="form-control" id="reg-email"
+                                                aria-describedby="emailHelp" placeholder="Email">
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label for="reg-password"></label>
+                                            <input type="password" class="form-control" id="reg-password"
+                                                placeholder="Password">
+                                        </div>
+
+
+                                        <!-- REGISTER button -->
+                                        <div id="test-right">
+
+
+                                            <button type="submit" class="btn btn-primary" id="lg-reg">REGISTER</button>
                                         </div>
                                         <select id="reg-state">
                                             <option value="AL">AL</option>
@@ -303,35 +437,36 @@
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
-    <script>
-        // Initialize Firebase
-        var firebaseConfig = {
-            apiKey: "AIzaSyDzOo657WbxTVPI0EHtospqgHol0OrsGXU",
-            authDomain: "project-1-93353.firebaseapp.com",
-            databaseURL: "https://project-1-93353.firebaseio.com",
-            projectId: "project-1-93353",
-            storageBucket: "",
-            messagingSenderId: "667158939513",
-            appId: "1:667158939513:web:b9329b853bc61409"
-        };
 
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+        <script>
+            // Initialize Firebase
+            var firebaseConfig = {
+                apiKey: "AIzaSyDzOo657WbxTVPI0EHtospqgHol0OrsGXU",
+                authDomain: "project-1-93353.firebaseapp.com",
+                databaseURL: "https://project-1-93353.firebaseio.com",
+                projectId: "project-1-93353",
+                storageBucket: "",
+                messagingSenderId: "667158939513",
+                appId: "1:667158939513:web:b9329b853bc61409"
+            };
 
-        // make auth and firestore references
-        var auth = firebase.auth();
-        var db = firebase.database();
-    </script>
-    <script type="text/javascript" src="javascript/auth.js"></script>
-    <script type="text/javascript" src="javascript/index.js"></script>
-    <script type="text/javascript" src="javascript/create-group.js"></script>
-    <script type="text/javascript" src="javascript/app.js"></script>
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+
+            // make auth and firestore references
+            var auth = firebase.auth();
+            var db = firebase.database();
+        </script>
+        <script type="text/javascript" src="javascript/auth.js"></script>
+        <script type="text/javascript" src="javascript/index.js"></script>
+        <script type="text/javascript" src="javascript/create-group.js"></script>
+        <script type="text/javascript" src="javascript/app.js"></script>
 </body>
 
 </html>
